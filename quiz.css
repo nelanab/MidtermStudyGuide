@@ -1,0 +1,231 @@
+
+/* CSS reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+body{
+    background-image: url('images/pixel.png'); 
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 6rem;
+    background-color: white;
+    border-bottom: 2px solid #7cd4e0;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    color: #7cd4e0;
+}
+
+h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: #7cd4e0;
+    line-height: 1.25em;
+}
+
+h4{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: #7cd4e0;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: #7cd4e0;
+    font-size: 15px;
+    line-height: 1.25em;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #7cd4e0;
+}
+
+#box_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #7cd4e0;
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    height: 400px;
+    width: 60vw;
+    border: 2px solid #7cd4e0;
+    border-radius: 10px;
+    line-height: 1.5em;
+    margin: auto;
+    box-shadow: 0 10px 0 #7cd4e0;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50vw;
+    height: 300px;
+}
+
+#button{
+    background-color: white;
+    padding: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 15px;
+    width: 300px;
+    margin: auto;
+    clear: both;
+    margin-top: 30px;
+    color: #7cd4e0;
+    border-radius: 20px;
+    border: 2px solid #7cd4e0;
+    transition: box-shadow .2s ease-in-out;
+}
+
+#button:hover{
+    box-shadow: 0 10px 0 #7cd4e0;
+}
+
+#next_button{
+    clear: both;
+    background-color: white;
+    padding: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    color: #7cd4e0;
+    border-radius: 20px;
+    border: 2px solid #7cd4e0;
+    transition: box-shadow .2s ease-in-out;
+}
+
+#next_button:hover{
+    box-shadow: 0 10px 0 #7cd4e0;
+}
+
+#talley_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 6rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    border-top: 2px solid #7cd4e0;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 1000px){
+    .box{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    body{
+        background-size: 500%;
+        overflow: hidden;
+    }
+
+    header{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .box{
+        height: 30vh;
+        font-size: 15px;
+    }
+
+    #buttons{
+        height: 20vh;
+        width: 100%;
+    }
+
+    #button, #next_button{
+        width: 80%;
+        padding: 1rem;
+    }
+
+    h2{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 10px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+}
