@@ -45,7 +45,7 @@ function answerQuestion(){
     var userResponse = prompt("Is this True or False? " + questions[currentQuestion].question);
     
     if(userResponse == questions[currentQuestion].correctAnswer){
-        card.innerHTML =  "<p><span id='correct_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        card.innerHTML =  "<p><span id='correct_text' class='answer_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
         var correctText = document.getElementById("correct_text");
         card.style.transition = "all .2s";
         correctText.style.color = "#55AA44";
@@ -53,7 +53,7 @@ function answerQuestion(){
         rightCount+=1;
         document.getElementById('correct_talley').innerHTML = rightCount;
     }if (userResponse != questions[currentQuestion].correctAnswer){
-        card.innerHTML = "<p><span id='incorrect_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        card.innerHTML = "<p><span id='incorrect_text' class='answer_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
         var incorrectText = document.getElementById("incorrect_text");
         incorrectText.style.color = "#993311";
         card.style.transition = "all .2s";
