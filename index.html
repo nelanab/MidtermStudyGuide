@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Midterm Study Guide</title>
+<html lang="en">
+    <head>
+        <title>Midterm Study Guide</title>
 		<meta charset="utf-8">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="quiz.css" type="text/css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
-		<!--CDN JQuery -->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<header>
-			<h2>Midterm Study Guide</h2>
-			<div id="talley_box">
-				<div class="count_box">
-					<h3>Correct</h3>
-					<br>
-					<h3 id="correct_talley">0</h3>
-				</div>
-	
-				<div class="count_box">
-					<h3>Incorrect</h3>
-					<br>
-					<h3 id="wrong_talley">0</h3>
-				</div>
-			</div>
-		</header>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="quiz.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+    </head>
 
-		<div id="box_container">
-			<!-- Box Containing Question -->
-			<div class="box"></div>
+    <body>
+        <header>
+            <h1>Midterm Study Guide</h1>
 
-			<!-- True or False Buttons -->
-			<div id="buttons">
-				<div class="answer" id="button">
-					<h3>Answer</h3>
-				</div>
-				<div id="next_button">
-					<h3>Next</h3>
-				</div>	
-			</div>
-		</div>
+            <div id="talleys">
+                <div class="talley_box">
+                    <img src="images/check.svg">
+                    <br>
+                    <h2>0</h2>
+                </div>
+                <div class="talley_box">
+                    <img src="images/x.svg">
+                    <br>
+                    <h2>0</h2>
+                </div>
+            </div>
+        </header>
 
-		<footer>
-			<p>Website Design by Ana Nelson - CWEB Student at Dunwoody College of Technology
-				<br><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Harryarts - www.freepik.com</a>
-			</p>
-		</footer>
+        <div id="card_container">
+            <!--Question Card -->
+            <div id="card"></div>
 
-		<script src="quiz.js"></script>
+            <div id="button_container">
+                <div class="button" id="answer">
+                    <h2>Answer</h2>
+                </div>
+                <div class="button" id="next">
+                    <h2>Next</h2>
+                </div>
+            </div>
+        </div>
 
-	</body>
+        <footer>
+            <p>Website Design by Ana Nelson - CWEB Student and Dunwoody College of Technology</p>
+        </footer>
 
+        <script src="quiz.js"></script>
+    </body>
 </html>

@@ -30,10 +30,9 @@ var wrongCount = 0, rightCount = 0;
 const totalQuestions = questions.length;
 
 // Target Question card to be populated by question in question array
-const card = document.querySelector('.box');
-const answerButton = document.querySelector('.answer');
-const nextButton = document.querySelector('#next_button');
-const results = document.querySelector('#question_container');
+const card = document.querySelector('#card');
+const answerButton = document.querySelector('#answer');
+const nextButton = document.querySelector('#next');
 
 // Populate Question card with Question
 function generateQuestions(index) {
