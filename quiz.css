@@ -34,7 +34,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: #070708;
-    color: white;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -47,7 +46,7 @@ header{
     padding-left: 20vw;
     padding-right: 20vw;
     border-bottom: 2px solid white;
-    background-color: #070708;
+    color: white;
 }
 
 #talleys{
@@ -70,7 +69,6 @@ header{
 #card{
     height: 45vh;
     width:  60vw;
-    float: left;
     border: 2px solid white;
     border-radius: 10px;
     font-size: 30px;
@@ -79,18 +77,17 @@ header{
     justify-content: center;
     text-align: center;
     line-height: 1.5em;
-    background-color: #070708;
+    color: white;
 }
 
 #button_container{
-    width: 45vw;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
+    margin-bottom: 5vh;
 }
 
 .button{
@@ -98,6 +95,16 @@ header{
     padding: 2rem;
     border: 2px solid white;
     border-radius: 10px;
+    color: white;
+    background-color: #070708;
+}
+
+#answer{
+    position: absolute;
+}
+
+#next{
+    position: absolute;
 }
 
 footer{
@@ -105,9 +112,10 @@ footer{
     width: 100%;
     border-top: 2px solid white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Font Styling */
@@ -119,8 +127,23 @@ h2{
     font-size: 20px;
 }
 
+#card p{
+    font-size: 30px;
+}
+
 p{
     font-size: 10px;
+    width: 100%;
+    line-height: 1.5em;
+    color: white;
+}
+
+span{
+    width: 100%;
+}
+
+#show_questions{
+    font-size: 15px;
 }
 
 img{

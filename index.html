@@ -16,12 +16,12 @@
                 <div class="talley_box">
                     <img src="images/check.svg">
                     <br>
-                    <h2>0</h2>
+                    <h2 id="correct_talley">0</h2>
                 </div>
                 <div class="talley_box">
                     <img src="images/x.svg">
                     <br>
-                    <h2>0</h2>
+                    <h2 id="wrong_talley">0</h2>
                 </div>
             </div>
         </header>
@@ -34,14 +34,15 @@
                 <div class="button" id="answer">
                     <h2>Answer</h2>
                 </div>
-                <div class="button" id="next">
+                <div class="button" id="next" style="display:none;">
                     <h2>Next</h2>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>Website Design by Ana Nelson - CWEB Student and Dunwoody College of Technology</p>
+            <p><span id="show_questions">Show Questions</span><br><br>
+            Website Design by Ana Nelson - CWEB Student and Dunwoody College of Technology</p>
         </footer>
 
         <script src="quiz.js"></script>

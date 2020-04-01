@@ -45,31 +45,32 @@ function answerQuestion(){
     var userResponse = prompt("Is this True or False? " + questions[currentQuestion].question);
     
     if(userResponse == questions[currentQuestion].correctAnswer){
-        card.style.transform="rotateX(360deg)";
-        card.style.transition = "all 2s";
-        card.innerHTML =  "<br>Correct!<br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer;
-        
+        card.innerHTML =  "<p><span id='correct_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var correctText = document.getElementById("correct_text");
+        card.style.transition = "all .2s";
+        correctText.style.color = "#55AA44";
+
         rightCount+=1;
         document.getElementById('correct_talley').innerHTML = rightCount;
     }if (userResponse != questions[currentQuestion].correctAnswer){
-        card.style.transform = "rotateX(360deg)";
-        card.style.border = "2px solid #ff64ca";
-        card.style.color = "#ff64ca";
-        card.style.boxShadow = "0 10px 0 #ff64ca";
-        card.style.transition = "all 2s";
-        card.innerHTML = "<br>Incorrect :(<br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer;
-    
+        card.innerHTML = "<p><span id='incorrect_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var incorrectText = document.getElementById("incorrect_text");
+        incorrectText.style.color = "#993311";
+        card.style.transition = "all .2s";
+
         wrongCount +=1;
         document.getElementById('wrong_talley').innerHTML = wrongCount;
     }
+
+    answerButton.style.display="none";
+    nextButton.style.display="block";
 };
 
 function loadNextQuestion() {
     currentQuestion++;
-    card.style.color = "#7cd4e0";
-    card.style.border = "2px solid #7cd4e0";
-    card.style.transform = "rotateX(-360deg)";
-    card.style.boxShadow = "0 10px 0 #7cd4e0";
+    answerButton.style.display="block";
+    nextButton.style.display="none";
+    card.style.color = "white";
     card.style.transition = "transform 0s ease-in";
 
     if(currentQuestion == totalQuestions - 1) {
@@ -85,10 +86,8 @@ function loadNextQuestion() {
     else{
         generateQuestions(currentQuestion);
     }
-}
-
+} 
 // On page load, loads first question
 generateQuestions(currentQuestion);
-
-nextButton.addEventListener('click', loadNextQuestion);
 answerButton.addEventListener('click', answerQuestion);
+nextButton.addEventListener('click', loadNextQuestion);
