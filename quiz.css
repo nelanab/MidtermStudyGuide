@@ -34,7 +34,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: #070708;
-    background-image: url('images/background.png');
     color: white;
     font-family: 'Press Start 2P', cursive;
 }
@@ -48,6 +47,7 @@ header{
     padding-left: 20vw;
     padding-right: 20vw;
     border-bottom: 2px solid white;
+    background-color: #070708;
 }
 
 #talleys{
