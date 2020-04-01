@@ -34,6 +34,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: #070708;
+    background-image: url('images/background.png');
     color: white;
     font-family: 'Press Start 2P', cursive;
 }
@@ -78,6 +79,7 @@ header{
     justify-content: center;
     text-align: center;
     line-height: 1.5em;
+    background-color: #070708;
 }
 
 #button_container{
