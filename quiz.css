@@ -248,4 +248,12 @@ img{
     #show_questions{
         font-size: 10px;
     }
+    
+    #card{
+        font-size: 20px;
+    }
+
+    .answer_text{
+        font-size: 25px;
+    }
 }
