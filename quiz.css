@@ -78,6 +78,7 @@ header{
     text-align: center;
     line-height: 1.5em;
     color: white;
+    padding: 20px;
 }
 
 /* #card:hover{
@@ -178,4 +179,73 @@ span{
 img{
     height: 40px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px){
+    header{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        justify-content: space-between;
+    }
+
+    #talleys{
+        width: 200px;
+    }
+
+    #card{
+        width: 80vw;
+    }
+
+    .button{
+        width: 20vw;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    #card p{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    header{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        height: 15.5vh;
+    }
+
+    #talleys{
+        width: 150px;
+    }
+
+    footer{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    h1{
+        font-size: 20px;
+        margin-top: 1vh;
+    }
+
+    img{
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 5px;
+    }
+
+    #show_questions{
+        font-size: 10px;
+    }
 }
