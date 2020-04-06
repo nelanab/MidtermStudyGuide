@@ -32,7 +32,7 @@ const totalQuestions = questions.length;
 
 // Target Question card to be populated by question in question array
 const card = document.querySelector('#card');
-const answerButton = document.querySelector('#answer');
+const answerButton = document.querySelector('#truefalse');
 const nextButton = document.querySelector('#next');
 
 // Populate Question card with Question
@@ -42,34 +42,9 @@ function generateQuestions(index) {
     card.innerHTML = questions[index].question;
 }
 
-function answerQuestion(){
-    var userResponse = prompt("Is this True or False? " + questions[currentQuestion].question);
-    
-    if(userResponse == questions[currentQuestion].correctAnswer){
-        card.innerHTML =  "<p><span id='correct_text' class='answer_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
-        var correctText = document.getElementById("correct_text");
-        card.style.transition = "all .2s";
-        correctText.style.color = "#55AA44";
-
-        rightCount+=1;
-        document.getElementById('correct_talley').innerHTML = rightCount;
-    }if (userResponse != questions[currentQuestion].correctAnswer){
-        card.innerHTML = "<p><span id='incorrect_text' class='answer_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
-        var incorrectText = document.getElementById("incorrect_text");
-        incorrectText.style.color = "#993311";
-        card.style.transition = "all .2s";
-
-        wrongCount +=1;
-        document.getElementById('wrong_talley').innerHTML = wrongCount;
-    }
-
-    answerButton.style.display="none";
-    nextButton.style.display="block";
-};
-
 function loadNextQuestion() {
     currentQuestion++;
-    answerButton.style.display="block";
+    answerButton.style.display="flex";
     nextButton.style.display="none";
     card.style.color = "white";
     card.style.transition = "transform 0s ease-in";
@@ -88,9 +63,66 @@ function loadNextQuestion() {
         generateQuestions(currentQuestion);
     }
 } 
+
+// If the True is chosen:
+function answerTrue(){
+    if (questions[currentQuestion].correctAnswer == 'True'){
+        card.innerHTML =  "<p><span id='correct_text' class='answer_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var correctText = document.getElementById("correct_text");
+        card.style.transition = "all .2s";
+        correctText.style.color = "#55AA44";
+
+        rightCount+=1;
+        document.getElementById('correct_talley').innerHTML = rightCount;
+    }
+
+    else{
+        card.innerHTML = "<p><span id='incorrect_text' class='answer_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var incorrectText = document.getElementById("incorrect_text");
+        incorrectText.style.color = "#993311";
+        card.style.transition = "all .2s";
+
+        wrongCount +=1;
+        document.getElementById('wrong_talley').innerHTML = wrongCount;
+    }
+
+    answerButton.style.display="none";
+    nextButton.style.display="block";
+}
+
+function answerFalse(){
+    if (questions[currentQuestion].correctAnswer == 'False'){
+        card.innerHTML =  "<p><span id='correct_text' class='answer_text'>Correct!</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var correctText = document.getElementById("correct_text");
+        card.style.transition = "all .2s";
+        correctText.style.color = "#55AA44";
+
+        rightCount+=1;
+        document.getElementById('correct_talley').innerHTML = rightCount;
+    }
+
+    else{
+        card.innerHTML = "<p><span id='incorrect_text' class='answer_text'>Incorrect :(</span><br>" + questions[currentQuestion].question + "<br>is " + questions[currentQuestion].correctAnswer + "</p>";
+        var incorrectText = document.getElementById("incorrect_text");
+        incorrectText.style.color = "#993311";
+        card.style.transition = "all .2s";
+
+        wrongCount +=1;
+        document.getElementById('wrong_talley').innerHTML = wrongCount;
+    }
+
+    answerButton.style.display="none";
+    nextButton.style.display="block";
+}
+
+// Add onclick to true and false buttons
+var trueButton = document.getElementById('trueButton');
+trueButton.addEventListener('click', answerTrue);
+var falseButton = document.getElementById('falseButton');
+falseButton.addEventListener('click', answerFalse);
+
 // On page load, loads first question
 generateQuestions(currentQuestion);
-answerButton.addEventListener('click', answerQuestion);
 nextButton.addEventListener('click', loadNextQuestion);
 
 // Populate Questions Page
@@ -99,17 +131,8 @@ var answerText = document.getElementsByClassName('question_answer');
 
 var questionContainer = document.getElementById("question_container");
 var cardContainer = document.getElementById("card_container");
-var showQuestionsButton = document.getElementById("")
+var showQuestionsButton = document.getElementById("show_questions")
 
 function showQuestions(){
 
 }
-
-
-/* for (i = 0; i< totalQuestions; i++) {
-    var questionsText=  questions[i];
-    for (var object in questionsText) {
-        parsed += object + ": " + questionsText[object] + "\n";          
-    }
-}                           
-$("#box").val(parsed);  */ 
