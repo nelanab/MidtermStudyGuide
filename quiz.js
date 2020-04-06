@@ -1,3 +1,4 @@
+var parsed = "";
 var questions = [
     {
         "question": "JavaScript is case-sensitive", 
@@ -91,3 +92,24 @@ function loadNextQuestion() {
 generateQuestions(currentQuestion);
 answerButton.addEventListener('click', answerQuestion);
 nextButton.addEventListener('click', loadNextQuestion);
+
+// Populate Questions Page
+var questionText = document.getElementsByClassName('question');
+var answerText = document.getElementsByClassName('question_answer');
+
+var questionContainer = document.getElementById("question_container");
+var cardContainer = document.getElementById("card_container");
+var showQuestionsButton = document.getElementById("")
+
+function showQuestions(){
+
+}
+
+
+/* for (i = 0; i< totalQuestions; i++) {
+    var questionsText=  questions[i];
+    for (var object in questionsText) {
+        parsed += object + ": " + questionsText[object] + "\n";          
+    }
+}                           
+$("#box").val(parsed);  */ 
