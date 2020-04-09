@@ -145,9 +145,10 @@ header{
 #box{
     width: 60vw;
     border: 2px solid white;
+    color: white;
     border-radius: 10px;
-    height: 80vh;
-    padding: 30px;
+    height: auto;
+    padding: 3vmax;
 }
 
 #truefalse{
@@ -172,11 +173,24 @@ footer{
 /* Font Styling */
 h1{
     font-size: 30px;
+    line-height: 1.25em;
 }
 
 h2{
     font-size: 20px;
     color: white;
+}
+
+h3{
+    font-size: 18px;
+}
+
+#box h1, #box h2{
+    line-height: 1.5em;
+}
+
+#box h2, #box h3{
+    margin-left: 1vw;
 }
 
 .button h2{
@@ -232,6 +246,10 @@ img{
         width: 80vw;
     }
 
+    #box{
+        width: 80vw;
+    }
+
     #truefalse{
         width: 80%;
     }
@@ -246,6 +264,10 @@ img{
 
     h2{
         font-size: 15px;
+    }
+
+    h3{
+        font-size: 12px;
     }
 
     #card p{
