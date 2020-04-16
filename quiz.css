@@ -90,7 +90,7 @@ header{
     width:  60vw;
     border: 2px solid white;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +218,7 @@ h3{
 }
 
 #card p{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .answer_text{
